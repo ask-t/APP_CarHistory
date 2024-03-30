@@ -1,0 +1,39 @@
+import React, { useState } from 'react';
+
+const CheckStatusButton = () => {
+  // State to manage check-in/check-out status
+  // false = checked out, true = checked in
+  const [isCheckedIn, setIsCheckedIn] = useState(false);
+
+  const handleCheckIn = () => {
+    setIsCheckedIn(true);
+    // Implement check-in logic here
+  };
+
+  const handleCheckOut = () => {
+    setIsCheckedIn(false);
+    // Implement check-out logic here
+  };
+
+  return (
+    <div className="flex justify-center items-center h-screen">
+      {!isCheckedIn ? (
+        <button
+          onClick={handleCheckIn}
+          className="text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        >
+          Check-In
+        </button>
+      ) : (
+        <button
+          onClick={handleCheckOut}
+          className="text-white bg-red-500 hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+        >
+          Check-Out
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default CheckStatusButton;
