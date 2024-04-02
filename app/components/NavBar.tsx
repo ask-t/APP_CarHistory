@@ -12,7 +12,7 @@ const NavBar = () => {
   const currentPath = usePathname();
   console.log(`This is the current path: ${currentPath}`);
   const links = [
-    { label: "Home", href: '/' },
+    { label: "Home", href: '/checkin' },
   ]
   const { setTheme } = useTheme()
   return (
