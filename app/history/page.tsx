@@ -19,9 +19,9 @@ const Page = () => {
       const info = await response.json();
 
       // Sort by the date field in descending order to get the latest first
-      const sortedHistory = info.sort((a, b) => {
-        const dateA = new Date(a.startDate); // Parse the date
-        const dateB = new Date(b.startDate);
+      const sortedHistory = info.sort((a: any, b: any) => {
+        const dateA: any = new Date(a.startDate); // Parse the date
+        const dateB: any = new Date(b.startDate);
         return dateB - dateA; // Descending order (latest first)
       });
 
@@ -35,7 +35,7 @@ const Page = () => {
     <div className="container mx-auto p-4 space-y-4">
       <h1 className="text-xl font-bold text-gray-800">History</h1>
       <ul className="space-y-4">
-        {history.map((item) => (
+        {history.map((item: any) => (
           <li key={item.gasID} className="bg-white p-4 rounded-md shadow-sm hover:bg-gray-50">
             <Link href={`/history/${item.gasID}`} className="text-indigo-600 hover:underline">
               <strong>{item.gasID}</strong>

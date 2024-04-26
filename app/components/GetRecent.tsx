@@ -4,7 +4,7 @@ import { format, parseISO } from 'date-fns';
 
 const GetRecent = () => {
   const [status, setStatus] = useState(false);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [apiError, setApiError] = useState(null);
   const [statusMessage, setStatusMessage] = useState("Loading...");

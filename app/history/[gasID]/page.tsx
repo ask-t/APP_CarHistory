@@ -36,7 +36,7 @@ const Page = ({ params }: { params: { gasID: string } }) => {
         Back
       </button>
       <ul className="space-y-4">
-        {data.map((item) => (
+        {data.map((item: any) => (
           <li key={item._id} className="bg-white p-4 rounded-md shadow-sm hover:bg-gray-50">
             <strong className="text-indigo-600">{item._id}</strong>
             <p>Start Mile: {item.from}</p>
