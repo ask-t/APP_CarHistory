@@ -44,7 +44,7 @@ const Checkout = () => {
 
       const result = await response.json(); // Handle response if needed
       console.log('Checkout successful:', result);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error during checkout:', error);
     } finally {
       setIsLoading(false); // Reset loading state

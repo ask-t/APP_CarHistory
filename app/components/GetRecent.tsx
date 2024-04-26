@@ -22,7 +22,7 @@ const GetRecent = () => {
 
         const json = await response.json();
         setData(json); // Update the state with the new data
-      } catch (error) {
+      } catch (error: any) {
         setApiError(error.message); // Handle errors
       } finally {
         setIsLoading(false); // Update loading status
@@ -40,7 +40,7 @@ const GetRecent = () => {
 
         const json = await response.json();
         setStatus(json); // Set the status in state
-      } catch (error) {
+      } catch (error: any) {
         setApiError(error.message);
       }
     };
