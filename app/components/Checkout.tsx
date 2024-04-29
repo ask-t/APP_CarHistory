@@ -1,8 +1,8 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { endpoints } from '@/GlobalConstants';
 
-const Checkout = () => {
+const Checkout = (props: any) => {
   const [mileage, setMileage] = useState('');
   const [gas, setGas] = useState(false);
   const [cost, setCost] = useState('');
@@ -62,13 +62,15 @@ const Checkout = () => {
         </label>
         <input
           id="mileage"
-          type="text"
+          type="number"
           value={mileage}
           onChange={(e) => setMileage(e.target.value)}
+          min = {`${props.preMile}`}
           required
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
       </div>
+      <div>{props.preMile}</div>
 
       {/* Gas Checkbox */}
       <div className="flex items-center">
@@ -92,7 +94,8 @@ const Checkout = () => {
           </label>
           <input
             id="gasAmount"
-            type="text"
+            type="number"
+            step="0.01"
             value={cost}
             onChange={(e) => setCost(e.target.value)}
             required
