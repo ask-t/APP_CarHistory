@@ -1,4 +1,5 @@
 const base = 'https://api-car-history-nu.vercel.app/';
+// const base = 'http://localhost:3100/';
 export const endpoints = {
   mileage: {
     recents: base+'mileage/recents',
