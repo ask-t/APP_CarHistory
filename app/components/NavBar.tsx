@@ -13,6 +13,7 @@ const NavBar = () => {
   console.log(`This is the current path: ${currentPath}`);
   const links = [
     { label: "Home", href: '/' },
+    { label: "history", href: '/history'}
   ]
   const { setTheme } = useTheme()
   return (
