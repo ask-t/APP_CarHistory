@@ -18,7 +18,7 @@ const NavBar = () => {
   const { setTheme } = useTheme()
   return (
     <div>
-      <nav className='flex space-x-6 border-b mb-5 px-5 h-14 items-center'>
+      <nav className='flex space-x-6 border-b mb-5 px-5 h-14 items-center dark:bg-black text-white'>
         <Link href="/">
           <Image src="/icons8-face-85.png" width={50} height={50} alt="picture" />
         </Link>
@@ -27,7 +27,6 @@ const NavBar = () => {
           {links.map(link => <Link key={link.href} className={classnames({ 'text-cyan-700 font-bold': link.href === currentPath, 'text-zinc-900': link.href !== currentPath })} href={link.href}>{link.label}</Link>)}
         </ul>
       </nav>
-
     </div>
   )
 }
