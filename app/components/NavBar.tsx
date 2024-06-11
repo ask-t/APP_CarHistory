@@ -24,7 +24,7 @@ const NavBar = () => {
         </Link>
         <Link href='/'><div className='font-bold text-2xl'>CarHistory</div></Link>
         <ul className='flex space-x-6'>
-          {links.map(link => <Link key={link.href} className={classnames({ 'text-cyan-700 font-bold': link.href === currentPath, 'text-zinc-900': link.href !== currentPath })} href={link.href}>{link.label}</Link>)}
+          {links.map(link => <Link key={link.href} className={classnames({ 'text-cyan-700 font-bold': link.href === currentPath, 'text-zinc-900 dark:text-white': link.href !== currentPath })} href={link.href}>{link.label}</Link>)}
         </ul>
       </nav>
     </div>
