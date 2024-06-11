@@ -22,7 +22,7 @@ const NavBar = () => {
         <Link href="/">
           <Image src="/icons8-face-85.png" width={50} height={50} alt="picture" />
         </Link>
-        <Link href='/'><div className='font-bold text-2xl'>CarHistory</div></Link>
+        <Link href='/'><div className='font-bold text-2xl text-black dark:text-white'>CarHistory</div></Link>
         <ul className='flex space-x-6'>
           {links.map(link => <Link key={link.href} className={classnames({ 'text-cyan-700 font-bold': link.href === currentPath, 'text-zinc-900 dark:text-white': link.href !== currentPath })} href={link.href}>{link.label}</Link>)}
         </ul>
